@@ -13,10 +13,10 @@ class PostsController < ApplicationController
 	end
 
 	def create
-    @author = Author.first
+      @author = Author.first
 	  @post = Post.create(post_params)
 
-    @post.author_id = @author.id
+      @post.author_id = @author.id
 
 	  @post.save
 	  redirect_to post_path(@post)
